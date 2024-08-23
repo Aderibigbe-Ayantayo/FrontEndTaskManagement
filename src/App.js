@@ -2,10 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUp from './components/Auth/SignUp';
 import Login from './components/Auth/Login';
+import Dashboard from './components/Task/Dashboard';
 import TaskList from './components/Task/TaskList';
 import TaskForm from './components/Task/TaskForm';
 import TaskItem from './components/Task/TaskItem';
-import Dashboard from './components/Task/Dashboard';
+
+
 
 
 
@@ -21,7 +23,7 @@ function App() {
             borderRadius: '10px'
           }}>Home Page</h1>} /> */}
                     <Route path="/signup" element={<SignUp />} />
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/" index element={<Login />} />
                     <Route path="/tasks" element={<TaskList />} />
                     <Route path="/tasks/new" element={<TaskForm />} />
                     <Route path="/tasks/item" element={<TaskItem />} />
