@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignUp from './components/Auth/SignUp';
+import Login from './components/Auth/Login';
+import TaskList from './components/Task/TaskList';
+import TaskForm from './components/Task/TaskForm';
+import TaskItem from './components/Task/TaskItem';
+import Dashboard from './components/Task/Dashboard';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div>
+                <Routes>
+                    {/* <Route path="/" element={<h1 style={{
+            color: 'white', // Text color
+            padding: '100px',
+            background: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background for text
+            borderRadius: '10px'
+          }}>Home Page</h1>} /> */}
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/tasks" element={<TaskList />} />
+                    <Route path="/tasks/new" element={<TaskForm />} />
+                    <Route path="/tasks/item" element={<TaskItem />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

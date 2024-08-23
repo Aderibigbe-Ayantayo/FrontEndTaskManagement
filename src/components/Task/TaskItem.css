@@ -1,0 +1,54 @@
+.task-item {
+    background: linear-gradient(to right, purple, rgb(176, 59, 166), rgb(166, 97, 166)); /* Gradient background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    color: rgb(242, 244, 248); /* Text color to contrast with the gradient background */
+    transition: transform 0.2s ease-in-out;
+}
+
+.task-item:hover {
+    transform: translateY(-10px); /* Subtle lift effect on hover */
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.task-actions {
+    margin-top: 10px;
+}
+
+.button-edit,
+.button-delete {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: black; /* Set button text color to black */
+    background-color: #140120; /* Default background color for buttons */
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-edit {
+    background-color: #140120; /* Dark purple */
+}
+
+.button-edit:hover {
+    background-color: #140119; /* Lighter purple on hover */
+}
+
+.button-delete {
+    background-color: #d32f2f; /* Red */
+}
+
+.button-delete:hover {
+    background-color: #e57373; /* Lighter red on hover */
+}

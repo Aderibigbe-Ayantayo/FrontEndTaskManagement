@@ -1,0 +1,141 @@
+
+.dashboard-container {
+    height: 100vh;
+    background-image: url('../assets/Dashboard\ BG.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dashboard-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    background-color: #000000; 
+    display: inline-block;
+    border-radius: 8px;
+    color:beige;
+    max-width: max-content;
+    margin-bottom: 25rem;
+
+}
+
+
+.welcome-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(253, 75, 226);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; /* Ensure letters don't wrap */
+}
+
+.welcome-message span {
+    background-color: rgb(10, 9, 13); /* Black background for each letter */
+    padding: 5px 10px; /* Adjust padding to fit the text */
+    margin: 0 2px; /* Small margin between letters */
+    border-radius: 5px; /* Optional: Add a small border-radius */
+    display: inline-block;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Adjust animation delay for alternating effect */
+.welcome-message span:nth-child(odd) {
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.welcome-message span:nth-child(even) {
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+.welcome-message span.empty {
+    background-color: transparent; /* No background for spaces */
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100vw) translateY(20px); /* Start from the left side of the screen */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100vw) translateY(20px); /* Start from the right side of the screen */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.task-message,
+.task-guide {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.task-message {
+    top: 50%;
+}
+
+.task-guide {
+    top: 65%;
+    font-style: italic;
+    font-family: 'Cursive', sans-serif; /* Change to your preferred stylish font */
+}
+
+.dashboard-nav a {
+    
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    background-color: black;
+    border-radius: 1rem;
+
+}
+
+.dashboard-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard-nav ul li {
+    margin-bottom: 15px;
+}
+
+.dashboard-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.dashboard-nav ul li a:hover {
+    text-decoration: underline;
+    color: darkorange;
+}
+
